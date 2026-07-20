@@ -27,7 +27,7 @@ pub enum GetCertificationsMovieError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum GetCertificationsTvError {
-    Status500(models::GetCertificationsMovie500Response),
+    Status500(models::GetCertificationsTv500Response),
     UnknownValue(serde_json::Value),
 }
 
@@ -35,7 +35,7 @@ pub enum GetCertificationsTvError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum GetKeywordByKeywordIdError {
-    Status500(models::TestMetadatas2XxResponse),
+    Status500(models::GetKeywordByKeywordId500Response),
     UnknownValue(serde_json::Value),
 }
 
