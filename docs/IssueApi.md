@@ -292,7 +292,7 @@ This endpoint does not need any parameter.
 
 ## update_issue_comment
 
-> models::IssueComment update_issue_comment(comment_id, test_metadatas2_xx_response)
+> models::IssueComment update_issue_comment(comment_id, update_issue_comment_request)
 Update issue comment
 
 Updates and returns a single issue comment in JSON format. 
@@ -303,7 +303,7 @@ Updates and returns a single issue comment in JSON format.
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **comment_id** | **String** |  | [required] |
-**test_metadatas2_xx_response** | [**TestMetadatas2XxResponse**](TestMetadatas2XxResponse.md) |  | [required] |
+**update_issue_comment_request** | [**UpdateIssueCommentRequest**](UpdateIssueCommentRequest.md) |  | [required] |
 
 ### Return type
 

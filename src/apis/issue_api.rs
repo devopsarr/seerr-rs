@@ -491,10 +491,10 @@ pub async fn get_issue_count(configuration: &configuration::Configuration, ) -> 
 }
 
 /// Updates and returns a single issue comment in JSON format. 
-pub async fn update_issue_comment(configuration: &configuration::Configuration, comment_id: &str, test_metadatas2_xx_response: models::TestMetadatas2XxResponse) -> Result<models::IssueComment, Error<UpdateIssueCommentError>> {
+pub async fn update_issue_comment(configuration: &configuration::Configuration, comment_id: &str, update_issue_comment_request: models::UpdateIssueCommentRequest) -> Result<models::IssueComment, Error<UpdateIssueCommentError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_path_comment_id = comment_id;
-    let p_body_test_metadatas2_xx_response = test_metadatas2_xx_response;
+    let p_body_update_issue_comment_request = update_issue_comment_request;
 
     let uri_str = format!("{}/issueComment/{commentId}", configuration.base_path, commentId=crate::apis::urlencode(p_path_comment_id));
     let mut req_builder = configuration.client.request(reqwest::Method::PUT, &uri_str);
@@ -510,7 +510,7 @@ pub async fn update_issue_comment(configuration: &configuration::Configuration, 
         };
         req_builder = req_builder.header("X-Api-Key", value);
     };
-    req_builder = req_builder.json(&p_body_test_metadatas2_xx_response);
+    req_builder = req_builder.json(&p_body_update_issue_comment_request);
 
     let req = req_builder.build()?;
     let resp = configuration.client.execute(req).await?;

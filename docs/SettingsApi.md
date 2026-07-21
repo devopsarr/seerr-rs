@@ -181,7 +181,7 @@ Name | Type | Description  | Required | Notes
 
 ## create_discover_add
 
-> models::DiscoverSlider create_discover_add(update_discover_request)
+> models::DiscoverSlider create_discover_add(create_discover_add_request)
 Add a new slider
 
 Add a single slider and return the newly created slider. Requires the `ADMIN` permission. 
@@ -191,7 +191,7 @@ Add a single slider and return the newly created slider. Requires the `ADMIN` pe
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**update_discover_request** | [**UpdateDiscoverRequest**](UpdateDiscoverRequest.md) |  | [required] |
+**create_discover_add_request** | [**CreateDiscoverAddRequest**](CreateDiscoverAddRequest.md) |  | [required] |
 
 ### Return type
 
@@ -2344,7 +2344,7 @@ Name | Type | Description  | Required | Notes
 
 ## test_sonarr
 
-> models::TestRadarr2XxResponse test_sonarr(test_radarr_request)
+> models::TestRadarr2XxResponse test_sonarr(test_sonarr_request)
 Test Sonarr configuration
 
 Tests if the Sonarr configuration is valid. Returns profiles and root folders on success.
@@ -2354,7 +2354,7 @@ Tests if the Sonarr configuration is valid. Returns profiles and root folders on
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**test_radarr_request** | [**TestRadarrRequest**](TestRadarrRequest.md) |  | [required] |
+**test_sonarr_request** | [**TestSonarrRequest**](TestSonarrRequest.md) |  | [required] |
 
 ### Return type
 
