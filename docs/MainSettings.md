@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **new_plex_login** | Option<**bool**> |  | [optional]
 **default_permissions** | Option<**f64**> |  | [optional]
 **enable_special_episodes** | Option<**bool**> |  | [optional]
+**version_check** | Option<**bool**> |  | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
