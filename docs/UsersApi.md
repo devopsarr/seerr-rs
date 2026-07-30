@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**create_user_import_from_plex**](UsersApi.md#create_user_import_from_plex) | **POST** /user/import-from-plex | Import all users from Plex
 [**create_user_register_push_subscription**](UsersApi.md#create_user_register_push_subscription) | **POST** /user/registerPushSubscription | Register a web push /user/registerPushSubscription
 [**create_user_settings_linked_accounts_jellyfin**](UsersApi.md#create_user_settings_linked_accounts_jellyfin) | **POST** /user/{userId}/settings/linked-accounts/jellyfin | Link the provided Jellyfin account to the current user
+[**create_user_settings_linked_accounts_jellyfin_quickconnect**](UsersApi.md#create_user_settings_linked_accounts_jellyfin_quickconnect) | **POST** /user/{userId}/settings/linked-accounts/jellyfin/quickconnect | Link Jellyfin/Emby account with Quick Connect
 [**create_user_settings_linked_accounts_plex**](UsersApi.md#create_user_settings_linked_accounts_plex) | **POST** /user/{userId}/settings/linked-accounts/plex | Link the provided Plex account to the current user
 [**create_user_settings_main**](UsersApi.md#create_user_settings_main) | **POST** /user/{userId}/settings/main | Update general settings for a user
 [**create_user_settings_notifications**](UsersApi.md#create_user_settings_notifications) | **POST** /user/{userId}/settings/notifications | Update notification settings for a user
@@ -233,6 +234,37 @@ Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **user_id** | **f64** |  | [required] |
 **create_user_settings_linked_accounts_jellyfin_request** | [**CreateUserSettingsLinkedAccountsJellyfinRequest**](CreateUserSettingsLinkedAccountsJellyfinRequest.md) |  | [required] |
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [cookieAuth](../README.md#cookieAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## create_user_settings_linked_accounts_jellyfin_quickconnect
+
+> create_user_settings_linked_accounts_jellyfin_quickconnect(user_id, create_auth_jellyfin_quickconnect_authenticate_request)
+Link Jellyfin/Emby account with Quick Connect
+
+Links a Jellyfin/Emby account to the user's profile using Quick Connect authentication
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**user_id** | **f64** |  | [required] |
+**create_auth_jellyfin_quickconnect_authenticate_request** | [**CreateAuthJellyfinQuickconnectAuthenticateRequest**](CreateAuthJellyfinQuickconnectAuthenticateRequest.md) |  | [required] |
 
 ### Return type
 

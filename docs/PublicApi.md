@@ -11,14 +11,17 @@ Method | HTTP request | Description
 
 ## get_status
 
-> models::GetStatus2XxResponse get_status()
+> models::GetStatus2XxResponse get_status(check_update_available)
 Get Seerr status
 
-Returns the current Seerr status in a JSON object.
+Returns the current Seerr status in a JSON object. updateAvailable and commitsBehind are omitted when checkUpdateAvailable is false.
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**check_update_available** | Option<**bool**> | If false, updateAvailable and commitsBehind will be omitted from the response. Defaults to the versionCheck setting. |  |
 
 ### Return type
 

@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **server_id** | Option<**f64**> |  | [optional]
 **profile_id** | Option<**f64**> |  | [optional]
 **root_folder** | Option<**String**> |  | [optional]
+**ignore_quota** | Option<**bool**> | If true, this request will not count against the user's quota. Requires MANAGE_REQUESTS permission. | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
