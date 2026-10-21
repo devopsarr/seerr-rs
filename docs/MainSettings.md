@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **application_title** | Option<**String**> |  | [optional]
 **application_url** | Option<**String**> |  | [optional]
 **hide_available** | Option<**bool**> |  | [optional]
+**hide_requested** | Option<**bool**> |  | [optional]
 **partial_requests_enabled** | Option<**bool**> |  | [optional]
 **local_login** | Option<**bool**> |  | [optional]
 **media_server_type** | Option<**f64**> |  | [optional]

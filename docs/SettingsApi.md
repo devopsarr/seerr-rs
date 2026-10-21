@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**create_discover_add**](SettingsApi.md#create_discover_add) | **POST** /settings/discover/add | Add a new slider
 [**create_initialize**](SettingsApi.md#create_initialize) | **POST** /settings/initialize | Initialize application
 [**create_jellyfin**](SettingsApi.md#create_jellyfin) | **POST** /settings/jellyfin | Update Jellyfin settings
+[**create_jellyfin_library_sync**](SettingsApi.md#create_jellyfin_library_sync) | **POST** /settings/jellyfin/library/sync | Sync Jellyfin libraries
 [**create_jellyfin_sync**](SettingsApi.md#create_jellyfin_sync) | **POST** /settings/jellyfin/sync | Start full Jellyfin library sync
 [**create_jobs_cancel**](SettingsApi.md#create_jobs_cancel) | **POST** /settings/jobs/{jobId}/cancel | Cancel a specific job
 [**create_jobs_run**](SettingsApi.md#create_jobs_run) | **POST** /settings/jobs/{jobId}/run | Invoke a specific job
@@ -28,6 +29,7 @@ Method | HTTP request | Description
 [**create_notifications_webhook**](SettingsApi.md#create_notifications_webhook) | **POST** /settings/notifications/webhook | Update webhook notification settings
 [**create_notifications_webpush**](SettingsApi.md#create_notifications_webpush) | **POST** /settings/notifications/webpush | Update Web Push notification settings
 [**create_plex**](SettingsApi.md#create_plex) | **POST** /settings/plex | Update Plex settings
+[**create_plex_library_sync**](SettingsApi.md#create_plex_library_sync) | **POST** /settings/plex/library/sync | Sync Plex libraries
 [**create_plex_sync**](SettingsApi.md#create_plex_sync) | **POST** /settings/plex/sync | Start full Plex library scan
 [**create_radarr**](SettingsApi.md#create_radarr) | **POST** /settings/radarr | Create Radarr instance
 [**create_sonarr**](SettingsApi.md#create_sonarr) | **POST** /settings/sonarr | Create Sonarr instance
@@ -84,6 +86,8 @@ Method | HTTP request | Description
 [**test_radarr**](SettingsApi.md#test_radarr) | **POST** /settings/radarr/test | Test Radarr configuration
 [**test_sonarr**](SettingsApi.md#test_sonarr) | **POST** /settings/sonarr/test | Test Sonarr configuration
 [**update_discover**](SettingsApi.md#update_discover) | **PUT** /settings/discover/{sliderId} | Update a single slider
+[**update_jellyfin_library**](SettingsApi.md#update_jellyfin_library) | **PUT** /settings/jellyfin/library/{libraryId} | Update a single Jellyfin library
+[**update_plex_library**](SettingsApi.md#update_plex_library) | **PUT** /settings/plex/library/{libraryId} | Update a single Plex library
 [**update_radarr**](SettingsApi.md#update_radarr) | **PUT** /settings/radarr/{radarrId} | Update Radarr instance
 [**update_sonarr**](SettingsApi.md#update_sonarr) | **PUT** /settings/sonarr/{sonarrId} | Update Sonarr instance
 
@@ -261,6 +265,33 @@ Name | Type | Description  | Required | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## create_jellyfin_library_sync
+
+> Vec<models::JellyfinLibrary> create_jellyfin_library_sync()
+Sync Jellyfin libraries
+
+Syncs the current libraries with the current Jellyfin server. Enabled flags are preserved.
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**Vec<models::JellyfinLibrary>**](JellyfinLibrary.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [cookieAuth](../README.md#cookieAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -799,6 +830,33 @@ Name | Type | Description  | Required | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## create_plex_library_sync
+
+> Vec<models::PlexLibrary> create_plex_library_sync()
+Sync Plex libraries
+
+Syncs the current libraries with the current Plex server. Enabled flags are preserved.
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**Vec<models::PlexLibrary>**](PlexLibrary.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [cookieAuth](../README.md#cookieAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1637,18 +1695,14 @@ This endpoint does not need any parameter.
 
 ## list_jellyfin_library
 
-> Vec<models::JellyfinLibrary> list_jellyfin_library(sync, enable)
+> Vec<models::JellyfinLibrary> list_jellyfin_library()
 Get Jellyfin libraries
 
 Returns a list of Jellyfin libraries in a JSON array.
 
 ### Parameters
 
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**sync** | Option<**String**> | Syncs the current libraries with the current Jellyfin server |  |
-**enable** | Option<**String**> | Comma separated list of libraries to enable. Any libraries not passed will be disabled! |  |
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -1812,18 +1866,14 @@ This endpoint does not need any parameter.
 
 ## list_plex_library
 
-> Vec<models::PlexLibrary> list_plex_library(sync, enable)
+> Vec<models::PlexLibrary> list_plex_library()
 Get Plex libraries
 
 Returns a list of Plex libraries in a JSON array.
 
 ### Parameters
 
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**sync** | Option<**String**> | Syncs the current libraries with the current Plex server |  |
-**enable** | Option<**String**> | Comma separated list of libraries to enable. Any libraries not passed will be disabled! |  |
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -2390,6 +2440,68 @@ Name | Type | Description  | Required | Notes
 ### Return type
 
 [**models::DiscoverSlider**](DiscoverSlider.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [cookieAuth](../README.md#cookieAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## update_jellyfin_library
+
+> models::JellyfinLibrary update_jellyfin_library(library_id, update_jellyfin_library_request)
+Update a single Jellyfin library
+
+Updates a single Jellyfin library with the provided values.
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**library_id** | **String** |  | [required] |
+**update_jellyfin_library_request** | [**UpdateJellyfinLibraryRequest**](UpdateJellyfinLibraryRequest.md) |  | [required] |
+
+### Return type
+
+[**models::JellyfinLibrary**](JellyfinLibrary.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [cookieAuth](../README.md#cookieAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## update_plex_library
+
+> models::PlexLibrary update_plex_library(library_id, update_jellyfin_library_request)
+Update a single Plex library
+
+Updates a single Plex library with the provided values.
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**library_id** | **String** |  | [required] |
+**update_jellyfin_library_request** | [**UpdateJellyfinLibraryRequest**](UpdateJellyfinLibraryRequest.md) |  | [required] |
+
+### Return type
+
+[**models::PlexLibrary**](PlexLibrary.md)
 
 ### Authorization
 
