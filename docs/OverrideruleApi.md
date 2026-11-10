@@ -5,6 +5,7 @@ All URIs are relative to *http://localhost:5055/api/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_overriderule**](OverrideruleApi.md#create_overriderule) | **POST** /overrideRule | Create override rule
+[**create_overriderule_advanced_request**](OverrideruleApi.md#create_overriderule_advanced_request) | **POST** /overrideRule/advancedRequest | Advanced override rule request
 [**delete_overriderule**](OverrideruleApi.md#delete_overriderule) | **DELETE** /overrideRule/{ruleId} | Delete override rule by ID
 [**list_overriderule**](OverrideruleApi.md#list_overriderule) | **GET** /overrideRule | Get override rules
 [**update_overriderule**](OverrideruleApi.md#update_overriderule) | **PUT** /overrideRule/{ruleId} | Update override rule
@@ -33,6 +34,36 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## create_overriderule_advanced_request
+
+> models::CreateOverrideruleAdvancedRequest2XxResponse create_overriderule_advanced_request(create_overriderule_advanced_request_request)
+Advanced override rule request
+
+Processes an advanced override rule request.
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**create_overriderule_advanced_request_request** | [**CreateOverrideruleAdvancedRequestRequest**](CreateOverrideruleAdvancedRequestRequest.md) |  | [required] |
+
+### Return type
+
+[**models::CreateOverrideruleAdvancedRequest2XxResponse**](CreateOverrideruleAdvancedRequest_2XX_response.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [cookieAuth](../README.md#cookieAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

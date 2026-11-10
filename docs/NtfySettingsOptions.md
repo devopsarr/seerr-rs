@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **url** | Option<**String**> |  | [optional]
 **topic** | Option<**String**> |  | [optional]
+**tags** | Option<**String**> |  | [optional]
 **auth_method_username_password** | Option<**bool**> |  | [optional]
 **username** | Option<**String**> |  | [optional]
 **password** | Option<**String**> |  | [optional]
