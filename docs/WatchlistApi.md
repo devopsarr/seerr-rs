@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## create_watchlist
 
-> models::Watchlist create_watchlist(watchlist)
+> models::Watchlist create_watchlist(watchlist_request)
 Add media to watchlist
 
 ### Parameters
@@ -19,7 +19,7 @@ Add media to watchlist
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**watchlist** | [**Watchlist**](Watchlist.md) |  | [required] |
+**watchlist_request** | [**WatchlistRequest**](WatchlistRequest.md) |  | [required] |
 
 ### Return type
 
