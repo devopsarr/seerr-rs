@@ -376,6 +376,8 @@ pub mod watch_providers_inner;
 pub use self::watch_providers_inner::WatchProvidersInner;
 pub mod watchlist;
 pub use self::watchlist::Watchlist;
+pub mod watchlist_request;
+pub use self::watchlist_request::WatchlistRequest;
 pub mod web_push_settings;
 pub use self::web_push_settings::WebPushSettings;
 pub mod webhook_settings;
